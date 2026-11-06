@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Empresa | AMAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="cuerpo-pagina">
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  
+  <!-- ENCABEZADO OBLIGATORIO (Minimalista para no afectar el diseño visual) -->
+  <header class="encabezado">
+    <div class="encabezado-inner encabezado-inner--centrado">
+      <h2 class="footer-titulo">Portal AMAC</h2>
+    </div>
+  </header>
+
+  <main id="principal" class="layout-centrado">
+    <section class="tarjeta-registro">
+      
+      <span class="tag-aliados">
+        <span class="material-symbols-outlined icono-18">verified</span> Red de Aliados AMAC
+      </span>
+
+      <h1 class="login-titulo">Registro de Empresa Empleadora Inclusiva</h1>
+      <p class="login-desc">Súmese a la red de empresas que valoran la experiencia, confiabilidad y talento de los adultos mayores.</p>
+
+      <form action="empresa-vacantes.html">
+        
+        <!-- Nombre de la Empresa -->
+        <div class="campo-formulario">
+          <label for="nombre_empresa">Nombre o Razón Social de la Empresa <span class="login-requerido">*</span></label>
+          <input type="text" id="nombre_empresa" name="nombre_empresa" class="input-simple" required placeholder="Ej. Grupo Comercial Peninsular S.A. de C.V.">
+        </div>
+
+        <!-- Giro o Sector -->
+        <div class="campo-formulario">
+          <label for="giro_empresa">Giro o Sector Comercial <span class="login-requerido">*</span></label>
+          <select id="giro_empresa" name="giro_empresa" class="input-simple" required>
+            <option value="" disabled selected>Seleccione el sector productivo...</option>
+            <option value="comercio">Comercio Minorista</option>
+            <option value="salud">Sector Salud / Farmacias</option>
+            <option value="educacion">Educación y Tutorías</option>
+            <option value="servicios">Servicios Generales</option>
+          </select>
+        </div>
+
+        <!-- Fila a 2 columnas: RFC y Teléfono -->
+        <div class="grid-form-2-col">
+          <div class="campo-formulario">
+            <label for="rfc_empresa">RFC <span class="login-requerido">*</span></label>
+            <input type="text" id="rfc_empresa" name="rfc_empresa" class="input-simple" required placeholder="GCP980421AB1">
+          </div>
+          <div class="campo-formulario">
+            <label for="telefono_empresa">Teléfono Corporativo <span class="login-requerido">*</span></label>
+            <input type="tel" id="telefono_empresa" name="telefono_empresa" class="input-simple" required placeholder="55 1234 5678">
+          </div>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="campo-formulario">
+          <label for="correo_rrhh">Correo Electrónico de Recursos Humanos <span class="login-requerido">*</span></label>
+          <input type="email" id="correo_rrhh" name="correo_rrhh" class="input-simple" required placeholder="talento@empresa.com" autocomplete="email">
+        </div>
+
+        <!-- Dirección Principal -->
+        <div class="campo-formulario">
+          <label for="direccion_empresa">Dirección o Sede Principal <span class="login-requerido">*</span></label>
+          <textarea id="direccion_empresa" name="direccion_empresa" class="input-simple" required placeholder="Calle, Número exterior/interior, Colonia, Alcaldía o Municipio, Ciudad"></textarea>
+        </div>
+
+        <!-- Subida de Archivo (Logo) -->
+        <div class="campo-formulario">
+          <label>Logotipo de la Empresa</label>
+          <div class="caja-upload">
+            <!-- Botón simulado para la subida de archivos (accesible conectando label e input) -->
+            <label for="logo_upload" class="btn-upload" tabindex="0">
+              <span class="material-symbols-outlined">folder_open</span> Adjuntar Archivo de Logo (PNG, JPG)
+            </label>
+            <!-- Input oculto pero accesible -->
+            <input type="file" id="logo_upload" name="logo_upload" accept=".png, .jpg, .jpeg" style="position: absolute; left: -9999px;">
+            <p class="upload-desc">Se mostrará en cada una de sus vacantes para generar confianza en los postulantes.</p>
+          </div>
+        </div>
+
+        <!-- Casilla de Políticas (Checkbox) -->
+        <div class="caja-politicas">
+          <input type="checkbox" id="acepto_politicas" name="acepto_politicas" class="checkbox-custom" required>
+          <label for="acepto_politicas" class="checkbox-label">
+            Aceptamos las políticas de <strong>Inclusión y No Discriminación por Edad de AMAC A.C.</strong>, garantizando condiciones dignas, trato respetuoso y remuneración justa para los adultos mayores.
+          </label>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" class="boton boton--naranja login-btn-grande">
+          Registrar Empresa y Comenzar a Publicar <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+
+      </form>
+
+      <!-- Enlace Inferior -->
+      <a href="login.html" class="enlace-destacado-rojo">
+        ¿Su empresa ya está dada de alta? Inicie sesión en el Portal Empresarial
+      </a>
+
+    </section>
+  </main>
+
+  <!-- Botón Flotante de Ayuda (Requisito RF-052)-->
+  <a href="tel:8002622622" class="btn-flotante-ayuda">
+    <span class="material-symbols-outlined icono-acento">call</span> Ayuda / Llamar a AMAC
+  </a>
+
+  <!-- PIE DE PÁGINA OBLIGATORIO -->
+  <footer class="footer-global footer-mini">
+      <p class="footer-copy">© 2026 AMAC. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
