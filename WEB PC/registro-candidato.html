@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio de Sesión | AMAC</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/componentes.css">
+</head>
+
+<body>
+	<a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+	<header class="encabezado">
+		<div class="encabezado-inner encabezado-inner--centrado">
+			<h2 class="footer-titulo">Portal AMAC</h2>
+		</div>
+	</header>
+
+	<main>
+		<section id="principal" class="layout-centrado">
+			<section class="tarjeta-registro">
+				<span class="tag-aliados">
+					<span class="material-symbols-outlined 18">volunteer_activism</span>Paso único de inscripción
+				</span>
+
+				<h1 class="login-titulo">Registro Gratuito de Candidato</h1>
+				<p class="login-desc">
+					Llene este sencillo formulario. Si necesita ayuda o prefiere dictarnos sus datos, recuerde
+					que puede llamarnos gratis al
+					<a class="enlace-destacado-rojo" href="tel:8002622622">
+						<span class="material-symbols-outlined icono-18">call</span>800-262-2622
+					</a>.
+				</p>
+
+				<form>
+					<!-- Nombre del candidato -->
+					<div class="campo-formulario">
+						<label for="nombre_candidato">Nombre(s)<span class="login-requerido">*</span></label>
+						<input type="text" id="nombre_candidato" name="nombre_candidato" class="input-simple" required
+							placeholder="Ej. Roberto">
+					</div>
+
+					<!-- Apellidos del candidato -->
+					<div class="campo-formulario">
+						<label for="apellidos_candidato">Apellidos completos<span class="login-requerido">*</span></label>
+						<input type="text" id="apellidos_candidato" name="apellidos_candidato" class="input-simple" required
+							placeholder="Ej. González Morales">
+					</div>
+
+					<!-- Edad del candidato -->
+					<div class="campo-formulario">
+						<label for="edad_candidato">Edad actual (en años cumplidos)<span class="login-requerido">*</span></label>
+						<input type="number" id="edad_candidato" name="edad_candidato" class="input-simple" required
+							placeholder="Ej. 62">
+					</div>
+
+					<!-- Telefono del candidato -->
+
+					<div class="campo-formulario">
+						<label for="telefono_candidato">Número de Teléfono Celular (10 dígitos)<span
+								class="login-requerido">*</span></label>
+						<input type="tel" id="telefono_candidato" name="telefono_candidato" class="input-simple" maxlength="10"
+							required placeholder="Ej. 5512345678">
+					</div>
+
+					<div class="campo-formulario">
+						<label for="correo_candidato" class="campo-label campo-label--fila">Correo Eletrónico<span
+								class="login-opcional">(opcional)</span></label>
+						<input type="email" id="correo_candidato" name="correo_candidato" class="input-simple"
+							placeholder="ejemplo@correo.com (dejar vacio si no usas correo)">
+					</div>
+
+					<!-- Ciudadd y estado donde se vive -->
+					<div class=" campo-formulario">
+						<label for="ciudad_candidato">Ciudad y Estado donde vive<span class="login-requerido">*</span></label>
+						<select id="ciudad_candidato" name="ciudad_candidato" class="input-simple" required>
+							<option value="" disabled selected>Seleccione la ciudad...</option>
+							<!-- TODO: definir valores de seccion de ciudad y estado del candidato -->
+							<option value="comercio">Comercio Minorista</option>
+							<option value="salud">Sector Salud / Farmacias</option>
+							<option value="educacion">Educación y Tutorías</option>
+							<option value="servicios">Servicios Generales</option>
+						</select>
+					</div>
+
+					<fieldset class="opciones-contacto">
+						<legend>¿Cuál es su método preferido para que nos
+							comuniquemos con usted?</legend>
+					</fieldset>
+
+					<!-- Opcion de llamada -->
+					<label class="opcion-tarjeta">
+						<input type="radio" name="metodo_contacto" value="llamada" required>
+						<span class="opcion-contenido">
+							<span class="opcion-titulo">
+								<span class="material-symbols-outlined">call</span> Llamada telefónica a mi celular
+							</span>
+							<span class="opcion-desc">Recomendado: hablamos directo y sin complicaciones</span>
+						</span>
+					</label>
+
+					<!-- Opcion de mensaje -->
+					<label class="opcion-tarjeta">
+						<input type="radio" name="metodo_contacto" value="mensaje" required>
+						<span class="opcion-contenido">
+							<span class="opcion-titulo">
+								<span class="material-symbols-outlined">chat</span>Mensaje de WhatsApp</span>
+							<span class="opcion-desc">Le enviamos el resumen de ofertas a su chat</span>
+						</span>
+					</label>
+
+					<!-- Opcion de correo -->
+					<label class="opcion-tarjeta">
+						<input type="radio" name="metodo_contacto" value="mail" required>
+						<span class="opcion-contenido">
+							<span class="opcion-titulo">
+								<span class="material-symbols-outlined">mail</span>Correo electrónico</span>
+							<span class="opcion-desc">Mensaje detallado para revisar en su computadora</span>
+						</span>
+					</label>
+
+					<fieldset class="interes-trabajo">
+						<legend>Áreas de trabajo en las que le gustaría participar:</legend>
+						<p>Puede marcar una o varias casillas según su experiencia y gusto</p>
+
+						<label class="opcion-tarjeta">
+							<input type="checkbox" name="areas" value="atencion_clientes">
+							<span class="opcion-titulo">Atención a Clientes / Mostrador</span>
+						</label>
+
+						<label class="opcion-tarjeta">
+							<input type="checkbox" name="areas" value="atencion_clientes">
+							<span class="opcion-titulo">Trabajo de Oficina / Archivo / Contabilidad</span>
+						</label>
+
+						<label class="opcion-tarjeta">
+							<input type="checkbox" name="areas" value="atencion_clientes">
+							<span class="opcion-titulo">Empaque y Logística Ligera</span>
+						</label>
+
+						<label class="opcion-tarjeta">
+							<input type="checkbox" name="areas" value="atencion_clientes">
+							<span class="opcion-titulo">Tutorías y Clases particulares</span>
+						</label>
+					</fieldset>
+
+					<div class="opcion-tarjeta opcion-tarjeta--legal">
+						<input type="checkbox" id="acepta_terminos" name="acepta_terminos" value="si" required>
+						<div>
+							<label for="acepta_terminos" class="opcion-titulo">Acepto los <a target="_blank" href="#"
+									class="enlace-legal">Términos del Servicio</a> y la
+								<a target="_blank" href="#" class="enlace-legal">Política de Privacidad</a> de AMAC A.C.
+								<br>
+								<span id="terminos-desc" class="opcion-desc"> Sus datos están
+									totalmente protegidos por la ley y solo se
+									comparten con empresas verificadas que respetan su trabajo y experiencia.</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Boton de Envio -->
+					<button type="submit" class="boton boton--naranja login-btn-grande">
+						Completar mi Registro en AMAC<span class="material-symbols-outlined">arrow_forward</span>
+					</button>
+
+				</form>
+
+				<a href="login.html" class="enlace-destacado-rojo"><span class="material-symbols-outlined">login</span>¿Ya tiene
+					cuenta registrada? Inicie sesión aquí</a>
+			</section>
+
+		</section>
+	</main>
+
+	<!-- Botón Flotante de Ayuda (Requisito RF-052)-->
+	<a href="tel:8002622622" class="btn-flotante-ayuda">
+		<span class="material-symbols-outlined icono-acento">call</span> Ayuda / Llamar a AMAC
+	</a>
+
+	<!-- PIE DE PÁGINA OBLIGATORIO -->
+	<footer class="footer-global footer-mini">
+		<p class="footer-copy">© 2026 AMAC. Todos los derechos reservados.</p>
+	</footer>
+
+</body>
+
+</html>
