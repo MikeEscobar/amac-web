@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolsa de Empleo Inclusiva | AMAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="cuerpo-pagina">
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <div class="encabezado-inner">
+      <div class="header-marca">
+        <span class="material-symbols-outlined header-marca-icono">handshake</span>
+        <div><strong class="header-marca-texto">AMAC</strong><br><span class="header-marca-sub">asociAMayores A.C. | Bolsa de Trabajo</span></div>
+      </div>
+
+      <nav class="header-nav-vacante" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link-bloque activo">Buscar<br>Empleos</a>
+        <a href="mis-solicitudes.html" class="nav-link-bloque">Mis<br>Solicitudes</a>
+        <a href="empresa-vacantes.html" class="nav-link-bloque">Panel<br>Empresa</a>
+        <a href="registro-empresa.html" class="nav-link-bloque">Publicar<br>Vacante</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:8002622622" class="btn-ayuda-header">
+          <span class="material-symbols-outlined">call</span>
+          <span>Ayuda:<br>(800) 262-2622</span>
+        </a>
+        <div class="header-usuario">
+          <img src="https://i.pravatar.cc/150?img=11" alt="Foto de perfil" class="header-usuario-img">
+          <div>
+            <span class="header-usuario-nombre header-usuario-nombre--block">Don Roberto G.</span>
+            <span class="header-usuario-rol">Candidato Mayor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="principal" class="contenedor">
+    
+    <!-- ENCABEZADO DE PÁGINA -->
+    <span class="etiqueta-verificadas">
+      <span class="material-symbols-outlined icono-18">verified</span> Vacantes Verificadas y Libres de Discriminación
+    </span>
+    
+    <h1 class="titulo-bolsa">Bolsa de Empleo Inclusiva para Adultos Mayores</h1>
+    <p class="desc-bolsa">Encuentre vacantes dignas, con horarios flexibles y respetuosas de su experiencia.</p>
+
+    <!-- CAJA DE BÚSQUEDA Y FILTROS -->
+    <section class="caja-busqueda" aria-label="Buscador de empleos">
+      
+      <form action="#" class="busqueda-grid-top">
+        <div class="campo-busqueda">
+          <label for="buscar_palabra" class="campo-busqueda-label">
+            <span class="material-symbols-outlined icono-18">work</span> Oficio, profesión o palabra clave
+          </label>
+          <div class="input-busqueda-wrapper">
+            <span class="material-symbols-outlined icono-busqueda-izq">search</span>
+            <input type="text" id="buscar_palabra" class="input-busqueda" placeholder="Ej. Contador, Recepcionista, Asesor...">
+          </div>
+        </div>
+        
+        <div class="campo-busqueda">
+          <label for="buscar_ubicacion" class="campo-busqueda-label">
+            <span class="material-symbols-outlined icono-18">location_on</span> Ubicación
+          </label>
+          <div class="input-busqueda-wrapper">
+            <input type="text" id="buscar_ubicacion" class="input-busqueda" value="Toda la República" style="padding-left: 16px;">
+            <span class="material-symbols-outlined icono-busqueda-der">keyboard_arrow_down</span>
+          </div>
+        </div>
+
+        <button type="submit" class="boton boton--naranja" style="min-height: 48px;">
+          <span class="material-symbols-outlined">search</span> Buscar Empleos
+        </button>
+      </form>
+
+      <div class="busqueda-filtros">
+        <div class="filtro-grupo">
+          <span class="filtro-label"><span class="material-symbols-outlined icono-18">schedule</span> Horarios:</span>
+          <button class="btn-pill btn-pill--activo"><span class="material-symbols-outlined icono-16">check</span> Todos</button>
+          <button class="btn-pill">Medio Tiempo (Matutino)</button>
+          <button class="btn-pill">Medio Tiempo (Vespertino)</button>
+          <button class="btn-pill">Trabajo desde Casa / Remoto</button>
+          <button class="btn-pill">Jornada Completa</button>
+        </div>
+        <div class="filtro-grupo">
+          <span class="filtro-label"><span class="material-symbols-outlined icono-18">category</span> Área:</span>
+          <button class="btn-pill">Administración y Contabilidad</button>
+          <button class="btn-pill">Atención al Cliente</button>
+          <button class="btn-pill">Educación y Tutorías</button>
+          <button class="btn-pill">Comercio y Ventas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CABECERA DE RESULTADOS -->
+    <div class="resultados-header">
+      <div>
+        <h2 class="resultados-titulo">3 Vacantes Disponibles Actualmente</h2>
+        <p class="resultados-desc">Resultados ordenados por relevancia y adaptabilidad para adultos mayores.</p>
+      </div>
+      <div class="resultados-ordenar">
+        <span>Ordenar:</span>
+        <strong style="color: var(--color-texto);">Más recientes primero</strong>
+      </div>
+    </div>
+
+    <!-- TARJETA DE VACANTE 1 -->
+    <article class="tarjeta-vacante-listado">
+      <div class="vacante-tags-top">
+        <div class="vacante-tags-grupo">
+          <span class="tag-horario-azul"><span class="material-symbols-outlined icono-14">wb_sunny</span> Medio Tiempo Matutino (9:00 a 13:00 hrs)</span>
+          <span class="tag-sueldo-rojo"><span class="material-symbols-outlined icono-14">payments</span> Sueldo: $9,500 MXN mensuales + Prestaciones de ley</span>
+        </div>
+        <span class="vacante-tiempo-publicacion"><span class="material-symbols-outlined icono-16">schedule</span> Publicada hace 2 días</span>
+      </div>
+      
+      <h3 class="vacante-listado-titulo">Asesor de Atención a Clientes y Mostrador</h3>
+      
+      <div class="vacante-listado-empresa">
+        <span class="material-symbols-outlined icono-18">domain</span> Farmacias y Servicios del Bienestar S.A.
+      </div>
+      
+      <div class="vacante-listado-ubicacion">
+        <span class="material-symbols-outlined icono-18">location_on</span> Benito Juárez, Ciudad de México (Cerca del Metro Zapata)
+      </div>
+      
+      <div class="vacante-listado-footer">
+        <p class="vacante-listado-desc">Buscamos persona con trato humano, paciencia y gusto por la atención al público. No requiere esfuerzo físico pesado.</p>
+        <a href="vacante.html" class="boton boton--oscuro btn-auto">
+          Ver detalles de esta vacante
+        </a>
+      </div>
+    </article>
+
+    <!-- TARJETA DE VACANTE 2 -->
+    <article class="tarjeta-vacante-listado">
+      <div class="vacante-tags-top">
+        <div class="vacante-tags-grupo">
+          <span class="tag-horario-azul"><span class="material-symbols-outlined icono-14">computer</span> Modalidad Híbrida / Remota</span>
+          <span class="tag-sueldo-rojo"><span class="material-symbols-outlined icono-14">payments</span> Sueldo: $14,000 a $16,000 MXN mensuales</span>
+        </div>
+        <span class="vacante-tiempo-publicacion"><span class="material-symbols-outlined icono-16">schedule</span> Publicada hoy</span>
+      </div>
+      
+      <h3 class="vacante-listado-titulo">Contador General o Auditor con Experiencia</h3>
+      
+      <div class="vacante-listado-empresa">
+        <span class="material-symbols-outlined icono-18">domain</span> Despacho Contable Morales & Asociados
+      </div>
+      
+      <div class="vacante-listado-ubicacion">
+        <span class="material-symbols-outlined icono-18">location_on</span> Monterrey, N.L. (2 días en oficina, 3 días en casa)
+      </div>
+      
+      <div class="vacante-listado-footer">
+        <p class="vacante-listado-desc">Valoramos su amplia trayectoria en conciliaciones fiscales y asesoría tributaria. Horarios adaptables.</p>
+        <a href="vacante.html" class="boton boton--oscuro btn-auto">
+          Ver detalles de esta vacante
+        </a>
+      </div>
+    </article>
+
+    <!-- TARJETA DE VACANTE 3 -->
+    <article class="tarjeta-vacante-listado">
+      <div class="vacante-tags-top">
+        <div class="vacante-tags-grupo">
+          <span class="tag-horario-azul"><span class="material-symbols-outlined icono-14">calendar_month</span> 3 días a la semana (Lunes, Miércoles y Viernes)</span>
+          <span class="tag-sueldo-rojo"><span class="material-symbols-outlined icono-14">payments</span> Sueldo: $8,200 MXN mensuales</span>
+        </div>
+        <span class="vacante-tiempo-publicacion"><span class="material-symbols-outlined icono-16">schedule</span> Publicada hace 4 días</span>
+      </div>
+      
+      <h3 class="vacante-listado-titulo">Tutor / Capacitador en Ofimática Básica y Redacción</h3>
+      
+      <div class="vacante-listado-empresa">
+        <span class="material-symbols-outlined icono-18">domain</span> Fundación Impulso Educativo A.C.
+      </div>
+      
+      <div class="vacante-listado-ubicacion">
+        <span class="material-symbols-outlined icono-18">location_on</span> Guadalajara, Jalisco
+      </div>
+      
+      <div class="vacante-listado-footer">
+        <p class="vacante-listado-desc">Impartición de cursos sencillos a jóvenes y adultos. Entorno cálido, dinámico y enfocado en la transmisión intergeneracional de conocimientos.</p>
+        <a href="vacante.html" class="boton boton--oscuro btn-auto">
+          Ver detalles de esta vacante
+        </a>
+      </div>
+    </article>
+
+    <!-- PAGINACIÓN -->
+    <nav class="paginacion" aria-label="Navegación de páginas">
+      <span class="btn-paginacion" style="color: var(--color-texto-claro); cursor: not-allowed; background: transparent; border-color: transparent;">&lt; Página anterior</span>
+      <a href="#" class="btn-paginacion btn-paginacion--activo">1</a>
+      <a href="#" class="btn-paginacion">2</a>
+      <a href="#" class="btn-paginacion">3</a>
+      <a href="#" class="btn-paginacion" style="background: transparent; border-color: transparent;">Página siguiente &gt;</a>
+    </nav>
+
+    <!-- CTA INFERIOR (Reutilizando el componente creado) -->
+    <section class="cta-dudas">
+      <div class="cta-dudas-info">
+        <div class="cta-dudas-icono-box">
+          <span class="material-symbols-outlined cta-dudas-icono">support_agent</span>
+        </div>
+        <div>
+          <h2 class="cta-dudas-titulo">¿Desea que le ayudemos a postularse por teléfono?</h2>
+          <p class="cta-dudas-desc">Un asesor de AMAC le acompañará paso a paso para llenar sus datos o agendar una entrevista presencial.</p>
+        </div>
+      </div>
+      <a href="tel:8002622622" class="boton boton--naranja btn-auto">
+        <span class="material-symbols-outlined">call</span> Llamar al 800-262-2622
+      </a>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA UNIVERSAL -->
+  <footer class="footer-global">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-marca">
+          <div class="footer-marca-bg">
+            <span class="material-symbols-outlined icono-primario icono-32">handshake</span>
+          </div>
+          <h2 class="footer-titulo">AMAC A.C.</h2>
+        </div>
+        <p>Fomentando el trabajo digno, inclusivo y enriquecedor para adultos mayores en toda la República Mexicana.</p>
+      </div>
+      <div>
+        <h3>Atención Telefónica</h3>
+        <ul>
+          <li><span class="material-symbols-outlined icono-acento">call</span> <strong>(800) 262-2622</strong></li>
+          <li class="footer-texto-claro">Lunes a Domingo, 8:00 AM - 8:00 PM</li>
+          <li><span class="material-symbols-outlined icono-acento">mail</span> ayuda@amac.org.mx</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Enlaces Accesibles</h3>
+        <ul>
+          <li><a href="#">Bolsa de Trabajo Activa</a></li>
+          <li><a href="#">Términos de privacidad simplificados</a></li>
+          <li><a href="#">Oficinas AMAC México</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Accesibilidad Visual</h3>
+        <p class="footer-texto-claro">Ajusta el texto para facilitar la lectura:</p>
+        <div class="footer-btn-letras">
+          <button class="btn-letra-normal">A- Letra Normal</button>
+          <button class="btn-letra-grande">A+ Letra Grande</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AMAC: asociAMayores A.C. Plataforma de Empleo Incluyente para Adultos Mayores.</p>
+      <a href="tel:8002622622" class="footer-link-box">
+        <span class="material-symbols-outlined icono-acento">support_agent</span>
+        <span class="footer-link-texto"><strong>¿Necesitas ayuda humana?</strong><br>Llama gratis al 800-AMAC-24</span>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
