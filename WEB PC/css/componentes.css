@@ -930,3 +930,252 @@ textarea.input-simple {
   text-decoration: none;
   color: #991b1b;
 }
+
+/* ==================================================
+   COMPONENTE: ALERTA DE ÉXITO (Mi-perfil-candidatos)
+   ================================================== */
+
+.alerta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacio-s, 1rem);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radio-lg, 12px);
+  border: 1px solid #bbf7d0;           /* Verde claro para el borde */
+  background-color: #e8f5e9;           /* Fondo verde muy suave */
+  margin-bottom: var(--espacio-m, 1.5rem);
+  width: 100%;
+}
+
+/* 1. Ícono circular verde a la izquierda */
+.alerta-icono {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-exito, #16a34a);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+/* 2. Textos del mensaje */
+.alerta-contenido {
+  flex: 1;
+}
+
+.alerta-titulo {
+  font-size: var(--texto-base, 1.125rem); /* ≥ 18px para adultos mayores */
+  font-weight: 700;
+  color: #14532d;                         /* Verde oscuro con contraste 4.5:1 */
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.alerta-check-inline {
+  margin-right: 4px;
+  color: #14532d;
+}
+
+.alerta-descripcion {
+  font-size: var(--texto-sm, 1rem);       /* 16px */
+  color: #166534;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 3. Botón de cerrar en la esquina derecha */
+.alerta-boton-cerrar {
+  background: transparent;
+  border: none;
+  color: #166534;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radio, 8px);
+  min-width: 44px;                        /* Requisito de accesibilidad táctil (≥ 44px) */
+  min-height: 44px;
+  margin: -8px -8px -8px 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.alerta-boton-cerrar:hover {
+  background-color: rgba(22, 101, 52, 0.12);
+  color: #14532d;
+}
+
+.alerta-boton-cerrar:focus-visible {
+  outline: 3px solid var(--color-acento, #ff7e67);
+  outline-offset: 2px;
+}
+
+/* ==================================================
+   COMPONENTE: PERFIL (Mi-perfil-candidatos)
+   ================================================== */
+
+/* =========================================
+   TARJETA Y CABECERA DE PERFIL
+   ========================================= */
+.tarjeta-perfil {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio-lg);
+  padding: var(--espacio-l);
+  box-shadow: var(--sombra-tarjeta);
+  border: 1px solid var(--color-borde);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.tag-overline {
+  color: var(--color-acento);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.perfil-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--espacio-m);
+  flex-wrap: wrap;
+}
+
+.perfil-cabecera-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.perfil-cabecera-titulo {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-h1);
+  color: var(--color-primario);
+  margin-bottom: 8px;
+}
+
+.perfil-cabecera-subtitulo {
+  color: var(--color-texto-claro);
+  font-size: var(--texto-base);
+  margin: 0;
+  max-width: 540px;
+}
+
+/* Badge del Usuario en la esquina superior derecha */
+.perfil-badge-usuario {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-lg);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfil-badge-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-acento);
+}
+
+.perfil-badge-nombre {
+  display: block;
+  font-weight: 700;
+  color: var(--color-primario);
+  font-size: var(--texto-base);
+}
+
+.perfil-divisor {
+  border: none;
+  border-top: 1px solid var(--color-borde);
+  margin: var(--espacio-l) 0;
+}
+
+/* =========================================
+   INPUTS CON ÍCONO A LA IZQUIERDA
+   ========================================= */
+.input-con-icono-izq {
+  position: relative;
+  width: 100%;
+}
+
+.input-icono-izq {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-texto-claro);
+  pointer-events: none;
+}
+
+.input-con-icono-izq input {
+  width: 100%;
+  min-height: 48px;                       /* Target táctil accesible (≥ 44px) */
+  padding: 12px 16px 12px 48px;           /* Espacio extra a la izquierda para el icono */
+  border: 1.5px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-size: var(--texto-base);
+  font-family: var(--fuente-base);
+  background-color: #f8fafc;
+  color: var(--color-texto);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Inputs sencillos y Textareas */
+.campo-formulario input:not([type="checkbox"]),
+.campo-formulario textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-size: var(--texto-base);
+  font-family: var(--fuente-base);
+  background-color: #f8fafc;
+  color: var(--color-texto);
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--color-primario);
+  outline: none;                          /* Manejado por :focus-visible global */
+}
+
+/* =========================================
+   ACCIONES Y NOTA DE PRIVACIDAD
+   ========================================= */
+.perfil-acciones {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-m);
+  margin-top: var(--espacio-l);
+  flex-wrap: wrap;
+}
+
+.boton-ancho-auto {
+  width: auto;
+  min-width: 220px;
+}
+
+.nota-proteccion {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--texto-sm);             /* 16px */
+  color: var(--color-texto-claro);
+  margin: 0;
+}
