@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Vacantes | AMAC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body class="cuerpo-pagina">
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  
+  <header class="encabezado">
+    <div class="encabezado-inner">
+      <div class="header-marca">
+        <span class="material-symbols-outlined header-marca-icono">handshake</span>
+        <div>
+          <strong class="header-marca-texto">AMAC</strong><br>
+          <span class="header-marca-sub">Gestión Inclusiva</span>
+        </div>
+      </div>
+      
+      <div class="header-actions header-actions--derecha">
+        <span class="header-texto-panel">Panel de Administración y Empresa</span>
+        <a href="tel:8002622622" class="btn-ayuda-header">
+          <span class="material-symbols-outlined">call</span> (800) 262-2622
+        </a>
+        <div class="header-usuario">
+          <img src="https://i.pravatar.cc/150?img=11" alt="Foto de perfil" class="header-usuario-img">
+          <div>
+            <span class="header-usuario-nombre header-usuario-nombre--block">Don Roberto G.</span>
+            <span class="header-usuario-rol">Administrador Empresa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="principal" class="contenedor layout-panel-empresa">
+    
+    <aside>
+      <nav class="panel-sidebar" aria-label="Navegación del Panel de Empresa">
+        <a href="empresa-vacantes.html" class="panel-sidebar-enlace panel-sidebar-enlace--activo">
+          <span class="material-symbols-outlined">work</span> Vacantes Empresa
+        </a>
+        <a href="#" class="panel-sidebar-enlace">
+          <span class="material-symbols-outlined">post_add</span> Publicar Vacante
+        </a>
+        <a href="#" class="panel-sidebar-enlace">
+          <span class="material-symbols-outlined">people</span> Candidatos
+        </a>
+        <a href="index.html" class="panel-sidebar-enlace">
+          <span class="material-symbols-outlined">search</span> Ver Portal Público
+        </a>
+        
+        <div class="panel-sidebar-soporte">
+          <h3 class="panel-sidebar-soporte-titulo">
+            <span class="material-symbols-outlined">support_agent</span> Soporte AMAC 24/7
+          </h3>
+          <p class="panel-sidebar-soporte-desc">Ayuda técnica gratuita</p>
+        </div>
+      </nav>
+    </aside>
+
+    <section>
+      
+      <div class="panel-empresa-header">
+        <div>
+          <span class="tag-aliados tag-aliados--margen">PORTAL CORPORATIVO INCLUSIVO AMAC</span>
+          <h1 class="panel-titulo panel-titulo--grande">Panel de Gestión de Vacantes</h1>
+          <p class="panel-desc">Empresa: <strong>Farmacias y Servicios del Bienestar S.A.</strong><br>Código Empresa: #EM-408</p>
+        </div>
+        <button class="boton boton--naranja btn-auto">
+          <span class="material-symbols-outlined">add_circle</span> Publicar nueva vacante para adultos mayores
+        </button>
+      </div>
+
+      <div class="grid-metricas">
+        
+        <div class="tarjeta-metrica tarjeta-metrica--blanca">
+          <span class="metrica-titulo">Vacantes Activas</span>
+          <div class="metrica-numero-box">
+            <span class="metrica-numero">3</span>
+            <div>
+              <span class="metrica-desc">puestos en curso</span><br>
+              <span class="metrica-sub-texto">Convocatorias visibles</span>
+            </div>
+            <div class="metrica-icono"><span class="material-symbols-outlined icono-primario">work_outline</span></div>
+          </div>
+        </div>
+
+        <div class="tarjeta-metrica tarjeta-metrica--azul">
+          <span class="metrica-titulo texto-azul-oscuro">Total de Solicitudes Recibidas</span>
+          <div class="metrica-numero-box">
+            <span class="metrica-numero texto-azul-oscuro">24</span>
+            <div>
+              <span class="metrica-desc texto-azul-oscuro">aspirantes AMAC</span><br>
+              <span class="metrica-sub-texto--azul">100% perfiles con trayectoria</span>
+            </div>
+            <div class="metrica-icono"><span class="material-symbols-outlined texto-azul-oscuro">groups</span></div>
+          </div>
+        </div>
+
+        <div class="tarjeta-metrica tarjeta-metrica--roja">
+          <span class="metrica-titulo texto-rojo-oscuro">Candidatos en Entrevista</span>
+          <div class="metrica-numero-box">
+            <span class="metrica-numero texto-rojo-oscuro">7</span>
+            <div>
+              <span class="metrica-desc texto-rojo-oscuro">en fase decisiva</span><br>
+              <span class="metrica-sub-texto--rojo">Coordinados vía AMAC</span>
+            </div>
+            <div class="metrica-icono"><span class="material-symbols-outlined texto-rojo-oscuro">record_voice_over</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="filtros-header">
+        <h2 class="panel-empresa-titulo-seccion">
+          <span class="material-symbols-outlined">format_list_bulleted</span> Listado de Vacantes Publicadas
+        </h2>
+        <span class="filtros-resultados">3 registros en sistema</span>
+      </div>
+
+      <article class="tarjeta-vacante-empresa tarjeta-vacante-empresa--activa">
+        <div class="vacante-empresa-header">
+          <span class="etiqueta-estado-vacante etiqueta-estado-vacante--activa">
+            <span class="material-symbols-outlined icono-14">circle</span> Activa (Recibiendo postulaciones)
+          </span>
+          <span>
+            <span class="material-symbols-outlined icono-16 icono-vertical-medio">calendar_today</span> Publicada el 10 de Octubre de 2026
+          </span>
+        </div>
+        
+        <h3 class="vacante-empresa-titulo">Asesor de Atención a Clientes y Mostrador</h3>
+        
+        <div class="vacante-empresa-info">
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">location_on</span> Benito Juárez, CDMX</span>
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">schedule</span> Medio tiempo matutino (Lunes a Viernes, 9:00 - 14:00)</span>
+        </div>
+        
+        <div class="vacante-empresa-acciones-layout">
+          <span class="tag-aliados tag-aliados--sin-margen">
+            <span class="material-symbols-outlined icono-18">person</span> 12 Solicitudes Recibidas
+          </span>
+          <div class="columna-botones">
+            <button class="boton boton--naranja btn-ver-solicitudes">
+              Ver 12 Solicitudes Recibidas <span class="material-symbols-outlined icono-16">arrow_forward</span>
+            </button>
+            <div class="botones-accion-mini">
+              <button class="btn-mini"><span class="material-symbols-outlined icono-18">edit</span> Editar</button>
+              <button class="btn-mini"><span class="material-symbols-outlined icono-18">pause_circle</span> Pausar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta-vacante-empresa tarjeta-vacante-empresa--activa">
+        <div class="vacante-empresa-header">
+          <span class="etiqueta-estado-vacante etiqueta-estado-vacante--activa">
+            <span class="material-symbols-outlined icono-14">circle</span> Activa
+          </span>
+          <span>
+            <span class="material-symbols-outlined icono-16 icono-vertical-medio">calendar_today</span> Publicada el 02 de Octubre de 2026
+          </span>
+        </div>
+        
+        <h3 class="vacante-empresa-titulo">Auxiliar de Inventario y Etiquetado Ligero</h3>
+        
+        <div class="vacante-empresa-info">
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">location_on</span> Cuauhtémoc, CDMX</span>
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">accessibility</span> Puesto 100% ergonómico con descansos continuos</span>
+        </div>
+        
+        <div class="vacante-empresa-acciones-layout">
+          <span class="tag-aliados tag-aliados--sin-margen">
+            <span class="material-symbols-outlined icono-18">person</span> 8 Solicitudes Recibidas
+          </span>
+          <div class="columna-botones">
+            <button class="boton boton--naranja btn-ver-solicitudes">
+              Ver 8 Solicitudes Recibidas <span class="material-symbols-outlined icono-16">arrow_forward</span>
+            </button>
+            <div class="botones-accion-mini">
+              <button class="btn-mini"><span class="material-symbols-outlined icono-18">edit</span> Editar</button>
+              <button class="btn-mini"><span class="material-symbols-outlined icono-18">pause_circle</span> Pausar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta-vacante-empresa tarjeta-vacante-empresa--pausada">
+        <div class="vacante-empresa-header">
+          <span class="etiqueta-estado-vacante etiqueta-estado-vacante--pausada">
+            <span class="material-symbols-outlined icono-14">pause_circle</span> Pausada
+          </span>
+          <span>
+            <span class="material-symbols-outlined icono-16 icono-vertical-medio">calendar_today</span> Publicada el 15 de Septiembre de 2026
+          </span>
+        </div>
+        
+        <h3 class="vacante-empresa-titulo vacante-empresa-titulo--pausado">Recepcionista Turno Vespertino</h3>
+        
+        <div class="vacante-empresa-info">
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">location_on</span> Miguel Hidalgo, CDMX</span>
+          <span class="vacante-empresa-detalle"><span class="material-symbols-outlined icono-18">schedule</span> Turno Vespertino (14:00 - 18:30)</span>
+        </div>
+        
+        <div class="vacante-empresa-acciones-layout">
+          <span class="tag-aliados tag-aliados--pausado">
+            <span class="material-symbols-outlined icono-18">person</span> 4 Solicitudes Recibidas
+          </span>
+          <div class="columna-botones">
+            <button class="boton boton--oscuro btn-ver-solicitudes">
+              Ver 4 Solicitudes Recibidas <span class="material-symbols-outlined icono-16">arrow_forward</span>
+            </button>
+            <div class="botones-accion-mini">
+              <button class="btn-mini"><span class="material-symbols-outlined icono-18">edit</span> Editar</button>
+              <button class="btn-mini btn-mini--rojo"><span class="material-symbols-outlined icono-18">play_circle</span> Reactivar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="cta-dudas cta-dudas--margen-top">
+        <div class="cta-dudas-info">
+          <div class="cta-dudas-icono-box cta-dudas-icono-box--pequeno">
+            <span class="material-symbols-outlined cta-dudas-icono icono-24">group_add</span>
+          </div>
+          <div>
+            <h2 class="cta-dudas-titulo cta-dudas-titulo--pequeno">¿Necesita asesoría para adaptar sus perfiles de puesto a adultos mayores?</h2>
+            <p class="cta-dudas-desc">Nuestros especialistas guían a su equipo de Recursos Humanos con ergonomía laboral, inducción paciente y legislación inclusiva sin costo alguno.</p>
+          </div>
+        </div>
+        <button class="boton btn-blanco btn-blanco--nowrap">
+          <span class="material-symbols-outlined">school</span> Solicite un taller gratuito con AMAC
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer-global">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-marca">
+          <div class="footer-marca-bg">
+            <span class="material-symbols-outlined icono-primario icono-32">handshake</span>
+          </div>
+          <h2 class="footer-titulo">AMAC A.C.</h2>
+        </div>
+        <p>Fomentando el trabajo digno, inclusivo y enriquecedor para adultos mayores en toda la República Mexicana.</p>
+      </div>
+      <div>
+        <h3>Atención Telefónica</h3>
+        <ul>
+          <li><span class="material-symbols-outlined icono-acento">call</span> <strong>(800) 262-2622</strong></li>
+          <li class="footer-texto-claro">Lunes a Domingo, 8:00 AM - 8:00 PM</li>
+          <li><span class="material-symbols-outlined icono-acento">mail</span> ayuda@amac.org.mx</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Enlaces Accesibles</h3>
+        <ul>
+          <li><a href="#">Bolsa de Trabajo Activa</a></li>
+          <li><a href="#">Términos de privacidad simplificados</a></li>
+          <li><a href="#">Oficinas AMAC México</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Accesibilidad Visual</h3>
+        <p class="footer-texto-claro">Ajusta el texto para facilitar la lectura:</p>
+        <div class="footer-btn-letras">
+          <button class="btn-letra-normal">A- Letra Normal</button>
+          <button class="btn-letra-grande">A+ Letra Grande</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AMAC: asociAMayores A.C. Plataforma de Empleo Incluyente para Adultos Mayores.</p>
+      <a href="tel:8002622622" class="footer-link-box">
+        <span class="material-symbols-outlined icono-acento">support_agent</span>
+        <span class="footer-link-texto"><strong>¿Necesitas ayuda humana?</strong><br>Llama gratis al 800-AMAC-24</span>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
