@@ -1,110 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio de Sesión | AMAC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/componentes.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio de Sesión | AMAC</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/componentes.css">
 </head>
+
 <body class="cuerpo-pagina">
-  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
-  
-  <header class="encabezado">
-    <div class="encabezado-inner encabezado-inner--centrado">
-      <h2 class="footer-titulo">Portal AMAC</h2>
-    </div>
-  </header>
+	<a class="saltar-contenido" href="#principal">Saltar al contenido</a>
 
-  <main id="principal" class="layout-centrado">
-    <section class="tarjeta-login">
-      
-      <div class="login-cabecera">
-        <div class="login-circulo"></div>
-        <div>
-          <p class="login-titulo-app">Portal Accesible AMAC</p>
-          <p class="login-subtitulo-app">Asociación de Adultos Mayores Activos</p>
-        </div>
-      </div>
+	<header class="encabezado">
+		<div class="encabezado-inner encabezado-inner--centrado">
+			<h2 class="footer-titulo">Portal AMAC</h2>
+		</div>
+	</header>
 
-      <h1 class="login-titulo">Bienvenido a su bolsa de trabajo AMAC</h1>
-      <p class="login-desc">Ingrese con su cuenta para ver sus solicitudes de empleo o gestionar vacantes.</p>
+	<main id="principal" class="layout-centrado">
+		<section class="tarjeta-login">
 
-      <div class="login-tabs">
-        <a href="#" class="login-tab login-tab--activa">
-          <span class="material-symbols-outlined">person</span> Soy Candidato
-        </a>
-        <a href="registro-empresa.html" class="login-tab login-tab--inactiva">
-          <span class="material-symbols-outlined">domain</span> Soy Empresa
-        </a>
-      </div>
+			<div class="login-cabecera">
+				<div class="login-circulo"></div>
+				<div>
+					<p class="login-titulo-app">Portal Accesible AMAC</p>
+					<p class="login-subtitulo-app">Asociación de Adultos Mayores Activos</p>
+				</div>
+			</div>
 
-      <div class="login-alerta">
-        <span class="material-symbols-outlined icono-primario">verified_user</span>
-        <div>
-          <strong class="tarjeta-info-valor">Acceso para Mayores de 60 Años</strong>
-          <p class="tarjeta-info-label">Consulte sus postulaciones activas, llamadas de entrevista y nuevas ofertas seguras.</p>
-        </div>
-      </div>
+			<h1 class="login-titulo">Bienvenido a su bolsa de trabajo AMAC</h1>
+			<p class="login-desc">Ingrese con su cuenta para ver sus solicitudes de empleo o gestionar vacantes.</p>
 
-      <form action="mis-solicitudes.html">
-        <div class="campo-formulario">
-          <label for="identificador">Correo electrónico o Número de Celular <span class="login-requerido">*</span></label>
-          <p class="campo-formulario_ayuda">Ejemplo: roberto@correo.com o 55 1234 5678</p>
-          <div class="input-con-icono">
-            <input type="text" id="identificador" class="input-login" required placeholder="Escriba aquí su correo o teléfono">
-            <span class="material-symbols-outlined input-icono">account_circle</span>
-          </div>
-        </div>
+			<div class="login-tabs">
+				<a href="#" class="login-tab login-tab--activa">
+					<span class="material-symbols-outlined">person</span> Soy Candidato
+				</a>
+				<a href="registro-empresa.html" class="login-tab login-tab--inactiva">
+					<span class="material-symbols-outlined">domain</span> Soy Empresa
+				</a>
+			</div>
 
-        <div class="campo-formulario login-campo-espaciado">
-          <label for="clave">Su Contraseña <span class="login-requerido">*</span></label>
-          <div class="input-con-icono">
-            <input type="password" id="clave" class="input-login" required placeholder="Escriba su clave secreta">
-            <span class="material-symbols-outlined input-icono login-icono-pass">visibility</span>
-          </div>
-        </div>
+			<div class="login-alerta">
+				<span class="material-symbols-outlined icono-primario">verified_user</span>
+				<div>
+					<strong class="tarjeta-info-valor">Acceso para Mayores de 60 Años</strong>
+					<p class="tarjeta-info-label">Consulte sus postulaciones activas, llamadas de entrevista y nuevas ofertas
+						seguras.</p>
+				</div>
+			</div>
 
-        <a href="#" class="login-link-recuperar">
-          <span class="material-symbols-outlined">lock_reset</span> 
-          <u>¿Olvidó su contraseña? Tenga calma, pulse aquí para recuperarla</u>
-        </a>
+			<form action="mis-solicitudes.html">
+				<div class="campo-formulario">
+					<label for="identificador">Correo electrónico o Número de Celular <span
+							class="login-requerido">*</span></label>
+					<p class="campo-formulario_ayuda">Ejemplo: roberto@correo.com o 55 1234 5678</p>
+					<div class="input-con-icono">
+						<input type="text" id="identificador" class="input-login" required
+							placeholder="Escriba aquí su correo o teléfono">
+						<span class="material-symbols-outlined input-icono">account_circle</span>
+					</div>
+				</div>
 
-        <button type="submit" class="boton boton--naranja login-btn-grande">
-          Iniciar Sesión en AMAC <span class="material-symbols-outlined">login</span>
-        </button>
-      </form>
+				<div class="campo-formulario login-campo-espaciado">
+					<label for="clave">Su Contraseña <span class="login-requerido">*</span></label>
+					<div class="input-con-icono">
+						<input type="password" id="clave" class="input-login" required placeholder="Escriba su clave secreta">
+						<span class="material-symbols-outlined input-icono login-icono-pass">visibility</span>
+					</div>
+				</div>
 
-      <div class="divisor-texto">O si es su primera vez aquí:</div>
+				<a href="#" class="login-link-recuperar">
+					<span class="material-symbols-outlined">lock_reset</span>
+					<u>¿Olvidó su contraseña? Tenga calma, pulse aquí para recuperarla</u>
+				</a>
 
-      <a href="registro-candidato.html" class="boton btn-registro-nuevo">
-        <span class="material-symbols-outlined">person_add</span> Crear una cuenta nueva (Registro gratis)
-      </a>
+				<button type="submit" class="boton boton--naranja login-btn-grande">
+					Iniciar Sesión en AMAC <span class="material-symbols-outlined">login</span>
+				</button>
+			</form>
 
-      <div class="login-ayuda-box">
-        <div class="login-ayuda-icono">
-          <span class="material-symbols-outlined">support_agent</span>
-        </div>
-        <div>
-          <h3 class="login-ayuda-titulo">¿Tiene dificultades para entrar?</h3>
-          <p class="login-ayuda-desc">
-            Llámenos sin costo al <a href="tel:8002622622" class="numero-resaltado">800-262-2622</a> y un asesor le acompañará paso a paso.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+			<div class="divisor-texto">O si es su primera vez aquí:</div>
 
-  <a href="tel:8002622622" class="btn-flotante-ayuda">
-    <span class="material-symbols-outlined icono-acento">call</span> Ayuda / Llamar a AMAC
-  </a>
+			<a href="registro-candidato.html" class="boton btn-registro-nuevo">
+				<span class="material-symbols-outlined">person_add</span> Crear una cuenta nueva (Registro gratis)
+			</a>
 
-  <footer class="footer-global footer-mini">
-      <p class="footer-copy">© 2026 AMAC. Todos los derechos reservados.</p>
-  </footer>
+			<div class="login-ayuda-box">
+				<div class="login-ayuda-icono">
+					<span class="material-symbols-outlined">support_agent</span>
+				</div>
+				<div>
+					<h3 class="login-ayuda-titulo">¿Tiene dificultades para entrar?</h3>
+					<p class="login-ayuda-desc">
+						Llámenos sin costo al <a href="tel:8002622622" class="numero-resaltado">800-262-2622</a> y un asesor le
+						acompañará paso a paso.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<a href="tel:8002622622" class="btn-flotante-ayuda">
+		<span class="material-symbols-outlined icono-acento">call</span> Ayuda / Llamar a AMAC
+	</a>
+
+	<footer class="footer-global footer-mini">
+		<p class="footer-copy">© 2026 AMAC. Todos los derechos reservados.</p>
+	</footer>
 </body>
+
 </html>

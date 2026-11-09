@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perfil de Empresa | AMAC</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block">
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/componentes.css">
+</head>
+
+<body>
+	<a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+	<div class="layout-panel">
+
+		<aside class="sidebar">
+			<div class="header-marca">
+				<span class="material-symbols-outlined header-marca-icono" aria-hidden="true">handshake</span>
+				<div>
+					<strong class="header-marca-texto">AMAC</strong>
+					<span class="header-marca-sub">Gestión Inclusiva</span>
+				</div>
+			</div>
+
+			<nav class="sidebar-nav" aria-label="Panel de empresa">
+				<a href="#" class="sidebar-link"><span class="material-symbols-outlined" aria-hidden="true">domain</span>
+					Vacantes Empresa</a>
+				<a href="#" class="sidebar-link"><span class="material-symbols-outlined" aria-hidden="true">post_add</span>
+					Publicar Vacante</a>
+				<a href="#" class="sidebar-link"><span class="material-symbols-outlined" aria-hidden="true">folder_shared</span>
+					Candidatos</a>
+				<a href="#" class="sidebar-link"><span class="material-symbols-outlined" aria-hidden="true">manage_search</span>
+					Ver Portal
+					Público</a>
+			</nav>
+
+			<div class="sidebar-pie">
+				<a href="tel:8002622622" class="sidebar-soporte">
+					<span class="material-symbols-outlined" aria-hidden="true">call</span>
+					Soporte AMAC 24/7
+				</a>
+			</div>
+		</aside>
+
+		<header class="encabezado-panel">
+			<p class="encabezado-panel-titulo">Portal institucional AMAC</p>
+
+			<div class="header-actions">
+				<a href="tel:8002622622" class="btn-ayuda-header">
+					<span class="material-symbols-outlined" aria-hidden="true">phone_in_talk</span>
+					(800) 262-2622
+				</a>
+				<div class="header-usuario">
+					<img src="https://i.pravatar.cc/150?img=11" alt="" class="header-usuario-img">
+					<div>
+						<span class="header-usuario-nombre">Don Roberto G.</span>
+						<span class="header-usuario-rol">Administrador Empresa</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main id="principal" class="panel-contenido">
+
+			<section class="perfil-tarjeta" aria-labelledby="perfil-titulo">
+
+				<span class="tag-aliados">
+					<span class="material-symbols-outlined icono-relleno" aria-hidden="true">verified</span>
+					Empresa Comprometida con el Adulto Mayor AMAC
+				</span>
+
+				<h1 id="perfil-titulo" class="perfil-titulo">Perfil de la Empresa</h1>
+				<p class="perfil-desc">
+					Gestione la identidad institucional y los canales de enlace directo para los postulantes AMAC.
+				</p>
+
+				<form class="perfil-form" action="#" method="post">
+
+					<div class="perfil-identidad">
+						<div class="perfil-logo">
+							<span class="material-symbols-outlined">domain</span>
+							<span class="perfil-logo-nombre">Farmacias y Servicios del Bienestar S.A.</span>
+							<span class="perfil-logo-etiqueta">Logo actual</span>
+						</div>
+
+						<div>
+							<h2 class="perfil-empresa-nombre">Farmacias y Servicios del Bienestar S.A.</h2>
+							<p class="perfil-empresa-estado">Perfil oficial verificado ante la red de empleabilidad AMAC.</p>
+
+							<input type="file" id="logo_empresa" name="logo_empresa" accept="image/png, image/jpeg, image/svg+xml"
+								class="visualmente-oculto">
+							<label for="logo_empresa" class="btn-secundario">
+								<span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+								Actualizar imágenes
+							</label>
+						</div>
+					</div>
+
+					<p class="perfil-nota">Los campos con asterisco (*) son obligatorios.</p>
+
+					<div class="perfil-grid">
+
+						<div class="perfil-campo">
+							<label for="razon_social" class="perfil-label">
+								Nombre o Razón Social <span class="perfil-requerido" aria-hidden="true">*</span>
+							</label>
+							<input type="text" id="razon_social" name="razon_social" class="perfil-input"
+								value="Farmacias y Servicios del Bienestar S.A. de C.V." autocomplete="organization" required>
+						</div>
+
+						<div class="perfil-campo">
+							<label for="giro" class="perfil-label">
+								Giro o Sector Comercial <span class="perfil-requerido" aria-hidden="true">*</span>
+							</label>
+							<input type="text" id="giro" name="giro" class="perfil-input"
+								value="Farmacéutica y Comercio Minorista de Salud" required>
+						</div>
+
+						<div class="perfil-campo">
+							<label for="rfc" class="perfil-label">
+								RFC <span class="perfil-requerido" aria-hidden="true">*</span>
+							</label>
+							<div class="perfil-input-icono perfil-input-icono--fin">
+								<input type="text" id="rfc" name="rfc" class="perfil-input perfil-input--rfc" value="FSB980421AB1"
+									pattern="[A-Za-zÑñ&]{3,4}[0-9]{6}[A-Za-z0-9]{3}" autocomplete="off" spellcheck="false"
+									title="12 caracteres para persona moral o 13 para persona física, sin espacios ni guiones" required>
+								<span class="material-symbols-outlined perfil-icono-valido" aria-hidden="true">verified</span>
+							</div>
+						</div>
+
+						<div class="perfil-campo">
+							<label for="direccion" class="perfil-label">
+								Dirección Fiscal y Sucursal Principal <span class="perfil-requerido" aria-hidden="true">*</span>
+							</label>
+							<div class="perfil-input-icono">
+								<span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+								<input type="text" id="direccion" name="direccion" class="perfil-input"
+									value="Av. Universidad 1080, Benito Juárez, CDMX" required>
+							</div>
+						</div>
+
+						<div class="perfil-campo">
+							<label for="contacto_rh" class="perfil-label">
+								Contacto de Recursos Humanos (Nombre y Teléfono)
+							</label>
+							<div class="perfil-input-icono">
+								<span class="material-symbols-outlined" aria-hidden="true">contact_phone</span>
+								<input type="text" id="contacto_rh" name="contacto_rh" class="perfil-input"
+									value="Lic. Mariana Robles - Tel: 55 5678 9012">
+							</div>
+						</div>
+
+						<div class="perfil-campo">
+							<label for="correo_institucional" class="perfil-label">
+								Correo Institucional <span class="perfil-requerido" aria-hidden="true">*</span>
+							</label>
+							<div class="perfil-input-icono">
+								<span class="material-symbols-outlined" aria-hidden="true">mail</span>
+								<input type="email" id="correo_institucional" name="correo_institucional" class="perfil-input"
+									value="talento@farmaciasbienestar.com" autocomplete="email" required>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="perfil-pie">
+						<p class="perfil-aviso">
+							<span class="material-symbols-outlined" aria-hidden="true">info</span>
+							Todos los datos mostrados son oficiales y visibles para los postulantes AMAC.
+						</p>
+						<button type="submit" class="btn-primario">
+							<span class="material-symbols-outlined" aria-hidden="true">save</span>
+							Guardar cambios
+						</button>
+					</div>
+
+				</form>
+			</section>
+		</main>
+
+	</div>
+
+	<a href="tel:8002622622" class="btn-flotante-ayuda">
+		<span class="material-symbols-outlined" aria-hidden="true">phone_in_talk</span>
+		Ayuda / Llamar a AMAC
+	</a>
+</body>
+
+</html>
