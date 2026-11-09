@@ -59,8 +59,8 @@
 					<!-- Edad del candidato -->
 					<div class="campo-formulario">
 						<label for="edad_candidato">Edad actual (en años cumplidos)<span class="login-requerido">*</span></label>
-						<input type="number" id="edad_candidato" name="edad_candidato" class="input-simple"
-							pattern="1[89]|[2-9][0-9]|1[01][0-9]|120" maxlength="3" required placeholder="Ej. 62">
+						<input type="number" id="edad_candidato" name="edad_candidato" class="input-simple" required
+							placeholder="Ej. 62">
 					</div>
 
 					<!-- Telefono del candidato -->
@@ -76,11 +76,11 @@
 						<label for="correo_candidato" class="campo-label campo-label--fila">Correo Eletrónico<span
 								class="login-opcional">(opcional)</span></label>
 						<input type="email" id="correo_candidato" name="correo_candidato" class="input-simple"
-							placeholder="ejemplo@correo.com (dejar vacio si no usas correo)"></input>
+							placeholder="ejemplo@correo.com (dejar vacio si no usas correo)">
 					</div>
 
 					<!-- Ciudadd y estado donde se vive -->
-					<div class="campo-formulario">
+					<div class=" campo-formulario">
 						<label for="ciudad_candidato">Ciudad y Estado donde vive<span class="login-requerido">*</span></label>
 						<select id="ciudad_candidato" name="ciudad_candidato" class="input-simple" required>
 							<option value="" disabled selected>Seleccione la ciudad...</option>
@@ -159,9 +159,10 @@
 							<label for="acepta_terminos" class="opcion-titulo">Acepto los <a target="_blank"
 									class="enlace-legal">Términos del Servicio</a> y la
 								<a target="_blank" class="enlace-legal">Política de Privacidad</a> de AMAC A.C.
-								<p id="terminos-desc" class="opcion-desc"> Sus datos están
+								<br>
+								<span id="terminos-desc" class="opcion-desc"> Sus datos están
 									totalmente protegidos por la ley y solo se
-									comparten con empresas verificadas que respetan su trabajo y experiencia.</p>
+									comparten con empresas verificadas que respetan su trabajo y experiencia.</span>
 							</label>
 						</div>
 					</div>
@@ -174,8 +175,7 @@
 				</form>
 
 				<a href="login.html" class="enlace-destacado-rojo"><span class="material-symbols-outlined">login</span>¿Ya tiene
-					cuenta registrada? Inicie sesión
-					aquí</a>
+					cuenta registrada? Inicie sesión aquí</a>
 			</section>
 
 		</section>
