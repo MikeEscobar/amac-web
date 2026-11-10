@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Panel de Administrador | AMAC</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block">
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/componentes.css">
+</head>
+
+<body class="cuerpo-pagina">
+	<a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+	<!-- ===== Encabezado ===== -->
+	<header class="admin-encabezado">
+		<div class="admin-encabezado-inner">
+			<a href="panel-admin.html" class="admin-marca">
+				<span class="admin-marca-logo">
+					<span class="material-symbols-outlined" aria-hidden="true">handshake</span>
+				</span>
+				<span>
+					<span class="admin-marca-texto">AMAC</span>
+					<span class="admin-marca-sub">Supervisión e Inclusión Laboral</span>
+				</span>
+			</a>
+
+			<div class="admin-acciones">
+				<a href="tel:8002622622" class="admin-btn-telefono">
+					<span class="material-symbols-outlined" aria-hidden="true">phone_in_talk</span>
+					(800) 262-2622
+				</a>
+				<div class="admin-usuario">
+					<span class="admin-usuario-avatar" aria-hidden="true">A</span>
+					<span>
+						<span class="admin-usuario-nombre">Admin AMAC</span>
+						<span class="admin-usuario-estado">Sesión activa</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main id="principal" class="admin-contenido">
+
+		<!-- ===== Introducción ===== -->
+		<section class="admin-tarjeta admin-intro" aria-labelledby="admin-titulo">
+			<div>
+				<span class="admin-etiqueta">
+					<span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span>
+					Gestión Institucional
+				</span>
+				<h1 id="admin-titulo" class="admin-titulo">Panel de Administrador</h1>
+				<p class="admin-desc">
+					Verificación preventiva de empresas aliadas y supervisión garantizada de condiciones laborales
+					seguras para adultos mayores.
+				</p>
+			</div>
+
+			<div class="admin-proteccion">
+				<span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+				<span>
+					<strong>Protección Activa</strong>
+					<span>Protocolo Ergonómico AMAC</span>
+				</span>
+			</div>
+		</section>
+
+		<!-- ===== Secciones ===== -->
+		<nav class="admin-secciones" aria-label="Secciones del panel">
+			<a href="panel-admin.html" class="admin-seccion" aria-current="page">
+				<span class="material-symbols-outlined" aria-hidden="true">domain</span>
+				Sección 1: Validar Empresas
+				<span class="admin-contador admin-contador--naranja">2 pendientes</span>
+			</a>
+			<a href="panel-admin-vacantes.html" class="admin-seccion">
+				<span class="material-symbols-outlined" aria-hidden="true">work</span>
+				Sección 2: Moderar Vacantes
+				<span class="admin-contador admin-contador--rojo">2 activas</span>
+			</a>
+		</nav>
+
+		<!-- ===== Empresas pendientes ===== -->
+		<section aria-labelledby="pendientes-titulo">
+			<div class="admin-seccion-cabecera">
+				<h2 id="pendientes-titulo" class="admin-seccion-titulo">Empresas Pendientes de Validación</h2>
+				<span class="admin-seccion-conteo">2 solicitudes por revisar</span>
+			</div>
+
+			<!-- Solicitud 1 -->
+			<article class="admin-solicitud" aria-labelledby="empresa-1">
+				<div class="admin-solicitud-cabecera">
+					<div>
+						<p class="admin-solicitud-meta">
+							<span class="admin-badge admin-badge--nueva">Solicitud nueva</span>
+							Recibida hoy
+						</p>
+						<h3 id="empresa-1" class="admin-empresa-nombre">Distribuidora Médica del Valle S.A.</h3>
+						<ul class="admin-empresa-datos">
+							<li><strong>RFC:</strong> <span class="admin-rfc">DMV190812HQ1</span></li>
+							<li>Giro: <strong>Venta de Insumos Médicos</strong></li>
+							<li>
+								<span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+								Benito Juárez, CDMX
+							</li>
+						</ul>
+					</div>
+
+					<div class="admin-contacto">
+						<p class="admin-contacto-titulo">Contacto de RR.HH.:</p>
+						<p>Lic. Fernando Soto</p>
+						<a href="tel:5543210987">
+							<span class="material-symbols-outlined" aria-hidden="true">call</span>
+							(55) 4321-0987
+						</a>
+					</div>
+				</div>
+
+				<div class="admin-expediente">
+					<h4 class="admin-expediente-titulo">
+						<span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
+						Expediente y Documentación Legal:
+					</h4>
+					<ul class="admin-documentos">
+						<li class="admin-documento">
+							<span class="material-symbols-outlined" aria-hidden="true">description</span>
+							<span class="admin-documento-info">
+								<strong>Constancia de Situación Fiscal</strong>
+								<span>SAT 2024 · Vigente</span>
+							</span>
+							<span class="admin-estado-doc">
+								<span class="material-symbols-outlined" aria-hidden="true">check</span>
+								Correcto
+							</span>
+						</li>
+						<li class="admin-documento">
+							<span class="material-symbols-outlined" aria-hidden="true">approval</span>
+							<span class="admin-documento-info">
+								<strong>Carta Compromiso de Inclusión AMAC</strong>
+								<span>Firmada por Representante Legal</span>
+							</span>
+							<span class="admin-estado-doc">
+								<span class="material-symbols-outlined" aria-hidden="true">check</span>
+								Firmada
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<form class="admin-solicitud-acciones" action="#" method="post">
+					<input type="hidden" name="empresa_id" value="DMV190812HQ1">
+					<button type="submit" name="decision" value="rechazar" class="admin-btn admin-btn--rechazar">
+						<span class="material-symbols-outlined" aria-hidden="true">cancel</span>
+						Rechazar<span class="visualmente-oculto"> a Distribuidora Médica del Valle S.A.</span>
+					</button>
+					<button type="submit" name="decision" value="aprobar" class="admin-btn admin-btn--aprobar">
+						<span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+						Aprobar<span class="visualmente-oculto"> a Distribuidora Médica del Valle S.A.</span>
+					</button>
+				</form>
+			</article>
+
+			<!-- Solicitud 2 -->
+			<article class="admin-solicitud" aria-labelledby="empresa-2">
+				<div class="admin-solicitud-cabecera">
+					<div>
+						<p class="admin-solicitud-meta">
+							<span class="admin-badge admin-badge--observacion">Observación preventiva</span>
+							Recibida ayer
+						</p>
+						<h3 id="empresa-2" class="admin-empresa-nombre">Logística San Ángel S. de R.L.</h3>
+						<ul class="admin-empresa-datos">
+							<li><strong>RFC:</strong> <span class="admin-rfc">LSA200214KJ9</span></li>
+							<li>Giro: <strong>Mensajería y Envíos Locales</strong></li>
+							<li>
+								<span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+								Álvaro Obregón, CDMX
+							</li>
+						</ul>
+					</div>
+
+					<div class="admin-contacto">
+						<p class="admin-contacto-titulo">Contacto de RR.HH.:</p>
+						<p>Lic. Mariana Rivas</p>
+						<a href="tel:5512349876">
+							<span class="material-symbols-outlined" aria-hidden="true">call</span>
+							(55) 1234-9876
+						</a>
+					</div>
+				</div>
+
+				<div class="admin-alerta">
+					<span class="material-symbols-outlined" aria-hidden="true">warning</span>
+					<div>
+						<p class="admin-alerta-titulo">Revisión ergonómica obligatoria requerida:</p>
+						<p>
+							El perfil operativo registrado menciona estiba en bodega. El protocolo institucional AMAC
+							no permite levantamiento mayor a 3 kg para personas adultas mayores.
+						</p>
+					</div>
+				</div>
+
+				<form class="admin-solicitud-acciones" action="#" method="post">
+					<input type="hidden" name="empresa_id" value="LSA200214KJ9">
+					<button type="submit" name="decision" value="rechazar" class="admin-btn admin-btn--rechazar">
+						<span class="material-symbols-outlined" aria-hidden="true">cancel</span>
+						Rechazar<span class="visualmente-oculto"> a Logística San Ángel S. de R.L.</span>
+					</button>
+					<button type="submit" name="decision" value="aprobar" class="admin-btn admin-btn--aprobar">
+						<span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+						Aprobar<span class="visualmente-oculto"> a Logística San Ángel S. de R.L.</span>
+					</button>
+				</form>
+			</article>
+		</section>
+	</main>
+
+	<!-- ===== Pie ===== -->
+	<footer class="admin-pie">
+		<div class="admin-pie-inner">
+			<p class="admin-pie-marca">
+				<span class="admin-pie-logo" aria-hidden="true">A</span>
+				Asociación Mexicana para el Adulto Mayor en el Comercio (AMAC)
+			</p>
+			<p>Garantizando entornos dignos de inclusión laboral.</p>
+		</div>
+	</footer>
+
+	<a href="tel:8002622622" class="btn-flotante-ayuda btn-flotante-ayuda--claro">
+		<span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+		Ayuda / Llamar a AMAC: (800) 262-2622
+	</a>
+</body>
+
+</html>

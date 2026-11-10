@@ -3263,3 +3263,622 @@ textarea.input-simple {
 		grid-template-columns: 1fr;
 	}
 }
+
+/* =========================================
+   ESTILOS ESPECÍFICOS: PANEL DE ADMINISTRADOR
+   ========================================= */
+
+.visualmente-oculto {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.admin-encabezado {
+	background: #1a2340;
+	color: #fff;
+}
+
+.admin-encabezado-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	max-width: 1100px;
+	margin-inline: auto;
+	padding: 0.75rem 1.5rem;
+}
+
+.admin-marca {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.admin-marca-logo {
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 34px;
+	background: #fff;
+	border-radius: 6px;
+	color: #1a2340;
+}
+
+.admin-marca-texto {
+	display: block;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.admin-marca-sub {
+	display: block;
+	font-size: 0.8rem;
+	opacity: 0.85;
+}
+
+.admin-acciones {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.admin-btn-telefono {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 14px;
+	background: #ff8a65;
+	border-radius: 8px;
+	color: #1a2340;
+	font-weight: 700;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.admin-usuario {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+}
+
+.admin-usuario-avatar {
+	display: grid;
+	place-items: center;
+	width: 32px;
+	height: 32px;
+	background: #ff8a65;
+	border-radius: 50%;
+	color: #1a2340;
+	font-weight: 700;
+}
+
+.admin-usuario-nombre {
+	display: block;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.admin-usuario-estado {
+	display: block;
+	font-size: 0.75rem;
+	color: #ffb59d;
+}
+
+.admin-encabezado a:focus-visible {
+	outline: 3px solid #ff8a65;
+	outline-offset: 2px;
+}
+
+.admin-contenido {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1100px;
+	margin-inline: auto;
+	padding: 1.5rem 1.5rem 6rem;
+}
+
+.admin-tarjeta {
+	padding: 1.5rem;
+	background: #fff;
+	border: 1px solid #e3e6ec;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(26, 35, 64, 0.06);
+}
+
+.admin-intro {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+.admin-etiqueta {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 12px;
+	background: #eef0f4;
+	border-radius: 999px;
+	color: #1a2340;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.admin-etiqueta .material-symbols-outlined {
+	font-size: 18px;
+}
+
+.admin-titulo {
+	margin: 0.5rem 0 0.25rem;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.75rem;
+	color: #1a2340;
+}
+
+.admin-desc {
+	max-width: 60ch;
+	margin: 0;
+	color: #3a3f4b;
+}
+
+.admin-proteccion {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 16px;
+	background: #f6f7f9;
+	border: 1px solid #d5d9e1;
+	border-radius: 10px;
+	color: #1a2340;
+}
+
+.admin-proteccion strong,
+.admin-proteccion span span {
+	display: block;
+}
+
+.admin-proteccion span span {
+	font-size: 0.8rem;
+	color: #5a6070;
+}
+
+.admin-secciones {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 8px;
+	padding: 6px;
+	margin-bottom: 1.5rem;
+	background: #eef0f4;
+	border-radius: 12px;
+}
+
+.admin-seccion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	min-height: 48px;
+	padding: 8px 12px;
+	background: #fff;
+	border: 1px solid #e3e6ec;
+	border-radius: 8px;
+	color: #1a2340;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+}
+
+.admin-seccion:hover {
+	border-color: #1a2340;
+}
+
+.admin-seccion[aria-current="page"] {
+	background: #1a2340;
+	border-color: #1a2340;
+	color: #fff;
+}
+
+.admin-seccion:focus-visible {
+	outline: 3px solid #ff8a65;
+	outline-offset: 2px;
+}
+
+.admin-contador {
+	padding: 2px 10px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.admin-contador--naranja {
+	background: #ff8a65;
+	color: #1a2340;
+}
+
+.admin-contador--rojo {
+	background: #c0392b;
+	color: #fff;
+}
+
+/* Título de la lista */
+.admin-seccion-cabecera {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 0.5rem 1rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #e3e6ec;
+}
+
+.admin-seccion-titulo {
+	margin: 0;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.35rem;
+	color: #1a2340;
+}
+
+.admin-seccion-conteo {
+	font-size: 0.875rem;
+	color: #5a6070;
+}
+
+/* ---------- Tarjeta de solicitud ---------- */
+.admin-solicitud {
+	padding: 1.25rem;
+	margin-bottom: 1.25rem;
+	background: #fff;
+	border: 1px solid #e3e6ec;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(26, 35, 64, 0.06);
+}
+
+.admin-solicitud-cabecera {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: start;
+	gap: 1rem;
+}
+
+.admin-solicitud-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	font-size: 0.85rem;
+	color: #5a6070;
+}
+
+.admin-badge {
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.admin-badge--nueva {
+	background: #1a2340;
+}
+
+.admin-badge--observacion {
+	background: #c0392b;
+}
+
+.admin-empresa-nombre {
+	margin: 0.4rem 0 0.5rem;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.35rem;
+	color: #1a2340;
+}
+
+.admin-empresa-datos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 20px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0.875rem;
+	color: #3a3f4b;
+}
+
+.admin-empresa-datos li {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.admin-empresa-datos .material-symbols-outlined {
+	font-size: 18px;
+}
+
+.admin-rfc {
+	font-family: ui-monospace, 'Courier New', monospace;
+	letter-spacing: 0.03em;
+}
+
+/* Contacto RR.HH. */
+.admin-contacto {
+	min-width: 200px;
+	padding: 12px 14px;
+	background: #f6f7f9;
+	border: 1px solid #e3e6ec;
+	border-radius: 10px;
+	font-size: 0.875rem;
+	color: #3a3f4b;
+}
+
+.admin-contacto p {
+	margin: 0 0 4px;
+}
+
+.admin-contacto-titulo {
+	font-weight: 700;
+	color: #1a2340;
+}
+
+.admin-contacto a {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: #b5471b;
+	font-weight: 700;
+	text-underline-offset: 3px;
+}
+
+.admin-contacto a .material-symbols-outlined {
+	font-size: 18px;
+}
+
+/* Expediente */
+.admin-expediente {
+	padding: 1rem;
+	margin-top: 1rem;
+	background: #f6f7f9;
+	border: 1px solid #e3e6ec;
+	border-radius: 10px;
+}
+
+.admin-expediente-titulo {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 0.75rem;
+	font-family: inherit;
+	font-size: 0.95rem;
+	color: #1a2340;
+}
+
+.admin-documentos {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.admin-documento {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid #e3e6ec;
+	border-radius: 8px;
+	color: #1a2340;
+}
+
+.admin-documento-info {
+	flex: 1;
+}
+
+.admin-documento-info strong,
+.admin-documento-info span {
+	display: block;
+}
+
+.admin-documento-info strong {
+	font-size: 0.875rem;
+}
+
+.admin-documento-info span {
+	font-size: 0.8rem;
+	color: #5a6070;
+}
+
+.admin-estado-doc {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	padding: 3px 10px;
+	background: #e6f4ea;
+	border-radius: 999px;
+	color: #1e6b37;
+	font-size: 0.75rem;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.admin-estado-doc .material-symbols-outlined {
+	font-size: 16px;
+}
+
+/* Alerta de observación */
+.admin-alerta {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 1rem;
+	margin-top: 1rem;
+	background: #fdecea;
+	border: 1px solid #f5b5ae;
+	border-radius: 10px;
+	color: #3a3f4b;
+}
+
+.admin-alerta>.material-symbols-outlined {
+	color: #c0392b;
+}
+
+.admin-alerta p {
+	margin: 0;
+}
+
+.admin-alerta .admin-alerta-titulo {
+	margin-bottom: 4px;
+	font-weight: 700;
+	color: #a32d22;
+}
+
+/* Acciones */
+.admin-solicitud-acciones {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 12px;
+	padding-top: 1rem;
+	margin-top: 1rem;
+	border-top: 1px solid #e3e6ec;
+}
+
+.admin-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 48px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 8px;
+	color: #fff;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.admin-btn--rechazar {
+	background: #c0392b;
+}
+
+.admin-btn--rechazar:hover {
+	background: #a32d22;
+}
+
+.admin-btn--aprobar {
+	background: #1e7a3c;
+}
+
+.admin-btn--aprobar:hover {
+	background: #17632f;
+}
+
+.admin-btn:focus-visible {
+	outline: 3px solid #1a2340;
+	outline-offset: 2px;
+}
+
+/* ---------- Pie ---------- */
+.admin-pie {
+	margin-top: auto;
+	background: #f6f7f9;
+	border-top: 1px solid #e3e6ec;
+}
+
+.admin-pie-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem 1.5rem;
+	max-width: 1100px;
+	margin-inline: auto;
+	padding: 1.25rem 1.5rem 5.5rem;
+	font-size: 0.875rem;
+	color: #5a6070;
+}
+
+.admin-pie-inner p {
+	margin: 0;
+}
+
+.admin-pie-marca {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 700;
+	color: #1a2340;
+}
+
+.admin-pie-logo {
+	display: grid;
+	place-items: center;
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	background: #1a2340;
+	border-radius: 50%;
+	color: #fff;
+	font-family: 'Libre Baskerville', serif;
+}
+
+/* Variante clara del botón flotante */
+.btn-flotante-ayuda--claro {
+	background: #ff8a65;
+	border-color: #1a2340;
+	color: #1a2340;
+}
+
+/* ---------- Pantallas chicas ---------- */
+@media (max-width: 767px) {
+
+	.admin-encabezado-inner,
+	.admin-contenido {
+		padding-inline: 1rem;
+	}
+
+	.admin-marca-sub,
+	.admin-usuario-estado {
+		display: none;
+	}
+
+	.admin-secciones,
+	.admin-solicitud-cabecera,
+	.admin-documentos {
+		grid-template-columns: minmax(0, 1fr);
+		/* evita que el contenido se salga de la tarjeta */
+	}
+
+	.admin-documento {
+		flex-wrap: wrap;
+	}
+
+	.btn-flotante-ayuda--claro {
+		right: 1rem;
+		bottom: 1rem;
+		padding: 10px 16px;
+		font-size: 0.9rem;
+	}
+
+	.admin-btn {
+		flex: 1;
+		justify-content: center;
+	}
+}
