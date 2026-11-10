@@ -3214,7 +3214,7 @@ textarea.input-simple {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.layout-panel {
 		grid-template-columns: 1fr;
 		grid-template-areas:
@@ -3262,4 +3262,425 @@ textarea.input-simple {
 	.perfil-grid {
 		grid-template-columns: 1fr;
 	}
+}
+/* =========================================
+   ESTILOS ESPECÍFICOS: CANDIDATOS POR VACANTE
+   =========================================
+ */
+
+/* ---------- Utilidades ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Columna de contenido del panel (separa tarjetas con un gap uniforme) */
+.panel-candidatos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  min-width: 0; /* Evita que el grid padre se desborde */
+}
+
+/* ---------- Subcabecera (volver + referencia) ---------- */
+.panel-subcabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+}
+
+.panel-subcabecera .btn-volver {
+  margin-bottom: 0;
+  min-height: 48px;
+  padding: 8px 20px;
+  background-color: #eceff2;
+  color: var(--color-primario);
+  border-radius: var(--radio);
+}
+
+.panel-subcabecera .btn-volver:hover {
+  background-color: var(--color-borde);
+}
+
+/* Variante azul con punto de color (Convocatoria Activa) */
+.tag-estado-activa--punto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-info);
+  color: var(--texto-info);
+  font-size: var(--texto-sm);
+}
+
+.tag-estado-activa--punto::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-acento);
+}
+
+/* ---------- Tarjeta de resumen de la vacante ---------- */
+/* Variante del overline con ícono y color de mayor contraste */
+.tag-overline--icono {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #b5471b;
+}
+
+.grid-estadisticas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-s);
+  margin-top: var(--espacio-m);
+}
+
+.grid-estadisticas .tarjeta-info {
+  align-items: center;
+  padding: 12px var(--espacio-s);
+}
+
+.grid-estadisticas .tarjeta-info-valor {
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+}
+
+.grid-estadisticas .tarjeta-info-label {
+  display: block;
+  font-size: var(--texto-sm); /* Mínimo 16px del proyecto */
+}
+
+/* ---------- Filtros por estatus ---------- */
+.filtros-lista--wrap {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filtros-lista--wrap .btn-filtro {
+  min-height: 48px;
+}
+
+/* ---------- Tarjeta de candidato ---------- */
+.lista-candidatos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.tarjeta-candidato {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-m);
+  align-items: start;
+  padding: var(--espacio-m);
+}
+
+@media (min-width: 768px) {
+  .tarjeta-candidato {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+}
+
+.candidato-principal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+  min-width: 0;
+}
+
+.candidato-cabecera {
+  display: flex;
+  gap: var(--espacio-s);
+  align-items: flex-start;
+}
+
+.candidato-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.candidato-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-superficie);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.candidato-avatar-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+  border: 2px solid var(--color-superficie);
+}
+
+.candidato-avatar-badge .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.candidato-nombre {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.candidato-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.candidato-ubicacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+/* Etiquetas: variantes nuevas sobre .etiqueta */
+.etiqueta--normal {
+  font-weight: 400;
+}
+
+.etiqueta--horario {
+  background-color: var(--bg-consejo);
+  color: var(--color-texto);
+  border: 1px solid var(--borde-consejo);
+}
+
+/* Bloque de experiencia (sobre .tarjeta-outline) */
+.candidato-experiencia {
+  background-color: #f1f5f9;
+  border-color: transparent;
+}
+
+.candidato-experiencia-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: var(--fuente-base);
+  font-size: var(--texto-base);
+  color: var(--color-primario);
+}
+
+.candidato-experiencia p {
+  margin: 0;
+}
+
+/* Método de contacto preferido */
+.candidato-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px var(--espacio-s);
+  background-color: #f1f5f9;
+  border-radius: var(--radio);
+}
+
+.candidato-contacto-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.candidato-contacto a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px; /* Target táctil accesible */
+}
+
+/* ---------- Panel de estatus ---------- */
+.candidato-estatus {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--espacio-s);
+  background-color: #f1f5f9;
+  border-radius: var(--radio-lg);
+}
+
+.candidato-estatus-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.estatus-actual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--color-superficie);
+  border-radius: var(--radio);
+  font-weight: 700;
+  color: var(--color-primario);
+  text-align: center;
+}
+
+/* El punto es decorativo: el estado siempre se comunica con texto */
+.estatus-punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.estatus-punto--pendiente { background-color: #facc15; border: 1px solid #ca8a04; }
+.estatus-punto--aceptado  { background-color: var(--color-exito); }
+.estatus-punto--rechazado { background-color: var(--color-error); }
+
+.estatus-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  font-size: var(--texto-sm);
+  color: var(--color-texto-claro);
+}
+
+.estatus-nota--confirmada {
+  padding: 8px 12px;
+  background-color: var(--bg-info);
+  color: var(--texto-info);
+  border-radius: var(--radio);
+  font-weight: 700;
+}
+
+.candidato-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.candidato-acciones .boton {
+  padding: 0.625rem 1rem;
+  font-size: var(--texto-sm);
+}
+
+/* Botón naranja con texto oscuro ( */
+.boton--naranja-contraste {
+  color: var(--color-primario);
+}
+
+a.boton--oscuro:hover,
+a.boton--naranja:hover {
+  color: var(--color-superficie);
+}
+
+a.boton--naranja-contraste:hover {
+  color: var(--color-primario);
+}
+
+/* Tarjeta de acción */
+.tarjeta-accion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espacio-m);
+}
+
+.tarjeta-accion-info {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  flex: 1 1 320px;
+}
+
+.icono-circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.icono-circulo--azul {
+  background-color: #d4eaf7;
+  color: var(--color-primario);
+}
+
+.tarjeta-accion-titulo {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.tarjeta-accion-desc {
+  margin: 0;
+  font-size: var(--texto-sm);
+  color: var(--color-texto-claro);
+}
+
+.tarjeta-accion-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 0 1 320px;
+}
+
+/* Botón flotante de ayuda */
+.btn-flotante-ayuda {
+  gap: 12px;
+  padding: 10px 20px 10px 12px;
+}
+
+.btn-flotante-ayuda-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+}
+
+.btn-flotante-ayuda-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.btn-flotante-ayuda-sup {
+  font-size: var(--texto-sm);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-acento);
 }
