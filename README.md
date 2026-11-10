@@ -61,12 +61,12 @@ El archivo **componentes.css** centraliza los siguientes elementos modulares, di
 
 ### Vista de Escritorio (Desktop)
 
-![1794280556074](image/README/1794280556074.png)
+![1794286435691](image/README/1794286435691.png)
 
 ### Vista Móvil (Celular)
 
-![1794280584549](image/README/1794280584549.png)
+![1794286419163](image/README/1794286419163.png)
 
 ## Accesibilidad (Lighthouse Score)
 
-![]()![]()![]()![1794280634818](image/README/1794280634818.png)
+![1794286426939](image/README/1794286426939.png)
